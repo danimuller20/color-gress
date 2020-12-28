@@ -66,6 +66,7 @@ buttonResetGame();
 
 function gamePoints(rgbColor, test) {
   let count = 3;
+  count = parseInt(count);
   if (localStorage.length > 0) {
     count = test + 3;
   }
