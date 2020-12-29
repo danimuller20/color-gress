@@ -66,8 +66,9 @@ buttonResetGame();
 
 function gamePoints(rgbColor, local) {
   let count = 3;
-  if (localStorage.length > 0 || isNaN(local)) {
+  if (isNaN(local)) {
     local = 0
+  } else if (localStorage.length > 0) {
     count = local + 3;
   }
   colorsGuess.addEventListener('click', function (event) {
