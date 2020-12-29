@@ -73,7 +73,6 @@ function gamePoints(rgbColor, local) {
   colorsGuess.addEventListener('click', function (event) {
     if (event.target.style.backgroundColor === rgbColor) {
       score.innerHTML = count;
-    console.log('linha 77 ' + score)
       let points = score.innerHTML;
       count += 3;
       localStorage.setItem('checkPoints', points);
