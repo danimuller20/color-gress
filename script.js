@@ -64,16 +64,17 @@ function buttonResetGame() {
 }
 buttonResetGame();
 
-function gamePoints(rgbColor, test) {
+function gamePoints(rgbColor, local) {
   let count = 3;
-  count = parseInt(count);
-  if (localStorage.length > 0) {
-    count = test + 3;
+  if (localStorage.length > 0 || isNaN(local)) {
+    local = 0
+    count = local + 3;
   }
   colorsGuess.addEventListener('click', function (event) {
     if (event.target.style.backgroundColor === rgbColor) {
       score.innerHTML = count;
-      const points = score.innerHTML;
+    console.log('linha 77 ' + score)
+      let points = score.innerHTML;
       count += 3;
       localStorage.setItem('checkPoints', points);
     }
