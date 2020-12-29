@@ -84,7 +84,7 @@ storage = parseInt(storage, 10);
 gamePoints(paragraphRgb, storage);
 
 function pageLoadPoints() {
-  const allPoints = localStorage.getItem('checkPoints');
+  const allPoints = parseInt(localStorage.getItem('checkPoints'));
   if (allPoints > 0) {
     score.innerHTML = allPoints;
   } else {
